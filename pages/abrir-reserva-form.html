@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La VineAria - Reserve sua Experiência</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+        integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/formulario/styles.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href='../index.html' class="cabecalho__logo-link">
+            <h1 class="cabecalho__logo-inicio">LaVine<span class="cabecalho__logo-final">Aria</span></h1>
+        </a>
+        <ul class="cabecalho-lista">
+            <li class="cabecalho-lista__item">
+                <a href="#" class="cabecalho-lista__link">Sobre</a>
+            </li>
+            <li class="cabecalho-lista__item">
+                <a href="#" class="cabecalho-lista__link">Cardápio</a>
+            </li>
+            <li class="cabecalho-lista__item">
+                <input class="cabecalho__pesquisa" type="search" placeholder="Busque aqui">
+            </li>
+            <li class="cabecalho-lista__item">
+                <a href="#" class="cabecalho-lista__item-botao cabecalho-lista__item-botao--azul">Reservar Mesa</a>
+            </li>
+            <li class="cabecalho-lista__item">
+                <a href="#" class="cabecalho-lista__item-botao">Já tenho uma Mesa</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="banner">
+        <h3 class="banner__titulo">Venha e Vive La VineAria <br> <span>Melhor Galpão de Vinhos e Queijos</span></h3>
+    </section>
+
+    <main class="container">
+        <ul class="breadcrumb">
+            <li>Inicio</li>
+            <li class="breadcrumb__pagina">Faça sua Reserva</li>
+        </ul>
+
+        <section class="formulario">
+            <div class="formulario__container">
+                <img src="../img/status-1.png" alt="Etapa um de três" class="formulario__etapas">
+                <h2 class="formulario__titulo-texto">Preencha os campos abaixo para reservarmos uma ótima experiência para você</h2>
+            </div>
+
+            <form class="principal__formulario" data-formulario>
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="nome">Nome</label>
+                    <input type="text" minlength="3" name="nome" required id="nome" class="campo__escrita" />
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="email">E-mail</label>
+                    <input type="email" minlength="4" name="email" required id="email" class="campo__escrita" />
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="telefone">Telefone</label>
+                    <input type="text" minlength="11" name="telefone" id="telefone" class="campo__escrita campo__escrita--menor" required />
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
+                    <input type="text" minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"  name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" required />
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="dataReservada">Data para sua Reserva</label>
+                    <input type="date" required name="dataReservada" id="dataReservada" class="campo__escrita campo__escrita--menor" />
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="quantidade">Quantidade de pessoas</label>
+                    <select name="quantidade" id="quantidade" class="campo__escrita campo__escrita--menor">
+                        <option value="1Pessoa">1 pessoa</option>
+                        <option value="2Pessoas">2 pessoas</option>
+                        <option value="3PessoasOuMais">3 ou mais pessoas</option>
+                    </select>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                
+                <fieldset class="formulario__termos">
+                    <input type="checkbox" required name="termos" class="termos__input">
+                    <p class="termos__texto">Li e estou ciente quanto às condições de tratamento dos meus dados conforme
+                        descrito na Política
+                        de
+                        Privacidade. <span class="mineiros">Obs: Caso preencha algum campo do formulario errado, fique tranquila/o os nossos mineiros irão te ajudar</span></p>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+
+                <div>
+                    <input type="submit" value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar>
+                    <span class="mensagem-erro"></span>
+                </div>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <section class="rodape__empresa">
+            <h2 class="rodape__titulo">La VineAria</h2>
+            <ul class="rodape__lista">
+                <li>
+                    <a href="#" class="rodape__link">Sobre</a>
+                </li>
+                <li>
+                    <a href="#" class="rodape__link">Perguntas frequentes</a>
+                </li>
+                <li>
+                    <a href="#" class="rodape__link">Cardapio</a>
+                </li>
+            </ul>
+        </section>
+        <section class="rodape__servicos">
+            <h2 class="rodape__titulo">Especialidade</h2>
+            <ul class="rodape__lista">
+                <li>
+                    <a href="#" class="rodape__link">Queijos</a>
+                </li>
+                <li>
+                    <a href="#" class="rodape__link">Vinhos</a>
+                </li>
+                <li>
+                    <a href="#" class="rodape__link">Experiência</a>
+                </li>
+            </ul>
+        </section>
+        <section class="rodape__contato">
+            <h2 class="rodape__titulo">Contato</h2>
+            <ul class="rodape__lista">
+                <li>
+                    <a href="#" class="rodape__link">11 94323-2223</a>
+                </li>
+                <li>
+                    <a href="#" class="rodape__link">vinii.viniciusribeiro@gmail.com</a>
+                </li>
+                <li>
+                    <a href="#" class="rodape__link">devdebotas@gmail.com</a>
+                </li>
+            </ul>
+        </section>
+        <section class="rodape__redes-sociais">
+            <h2 class="rodape__titulo">Acesse nossas redes</h2>
+            <ul class="rodape__lista redes-sociais__lista">
+                <li><img src="../img/Facebook.png" alt="ícone do facebook"></li>
+                <li><img src="../img/Youtube.png" alt="ícone do youtube"></li>
+                <li><img src="../img/Whatsapp.png" alt="ícone do whatsapp"></li>
+                <li><img src="../img/Instagram.png" alt="ícone do instagram"></li>
+            </ul>
+            <h2 class="rodape__logo"><span class="rodape__logo--negrito">La Vine</span>Aria</h2>
+        </section>
+    </footer>
+    <script type="module" src="/js/script.js"></script>
+</body>
+
+</html>
